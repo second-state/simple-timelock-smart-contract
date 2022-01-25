@@ -72,13 +72,13 @@ Always keep an exact record of how many tokens (sum total of all ERC20 tokens) w
 
 ## Step 7
 
-Transfer ERC20 tokens to the linear timelock contract.
+Transfer ERC20 tokens to the timelock contract.
 
 From the ERC20 token contract, use the `transfer` function to transfer ERC20 tokens to the timelock smart contract's address.
 
 ![Screen Shot 2022-01-24 at 1 15 46 pm](https://user-images.githubusercontent.com/9831342/150716642-b2d63734-e928-4513-aa44-860e016be358.png)
 
-You can confirm that these tokens have been transferred by pasting the linear timelock contract's address into the ERC20 contract's `balanceOf` function, as shown below.
+You can confirm that these tokens have been transferred by pasting the timelock contract's address into the ERC20 contract's `balanceOf` function, as shown below.
 
 ![Screen Shot 2022-01-24 at 1 19 48 pm](https://user-images.githubusercontent.com/9831342/150716797-ec250368-538d-4105-80c2-8427031b57c6.png)
 
@@ -86,7 +86,7 @@ You can confirm that these tokens have been transferred by pasting the linear ti
 
 Finalize owner participation.
 
-Once all allocations have been made and the ERC20 tokens have been transferred into the linear timelock contract, the owner can call the linear timelock contract's `finalizeAllIncomingDeposits()` function. This makes the linear timelock non-custodial, whereby the contract owner has no ability to alter token amounts and so forth. The operation of the linear timelock contract is purely based on the math in the `transferTimeLockedTokensAfterTimePeriod` function from this point forward.
+Once all allocations have been made and the ERC20 tokens have been transferred into the timelock contract, the owner can call the timelock contract's `finalizeAllIncomingDeposits()` function. This makes the timelock non-custodial, whereby the contract owner has no ability to alter token amounts and so forth. The operation of the timelock contract is purely based on the math in the `transferTimeLockedTokensAfterTimePeriod` function from this point forward.
 
 ## Step 9
 
